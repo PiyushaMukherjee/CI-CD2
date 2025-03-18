@@ -1,0 +1,13 @@
+name: Deploy to EC2
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # Runs on your EC2 instance
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run script on EC2
+        run: echo "GitHub Actions Runner is working on AWS EC2!"
